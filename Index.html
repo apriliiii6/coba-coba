@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Hadiah Spesial</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff6b6b,#ffb6c1);
+    font-family:Arial;
+    text-align:center;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    width:350px;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#text{
+    margin-top:20px;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>🎁 Klik untuk hadiah spesial</h2>
+
+    <button onclick="mulai()">Ambil Hadiah</button>
+
+    <div id="text"></div>
+</div>
+
+<script>
+let step = 0;
+
+function mulai(){
+    let t = document.getElementById("text");
+
+    if(step == 0){
+        t.innerHTML = "Loading...";
+    }
+    else if(step == 1){
+        t.innerHTML = "Memeriksa identitas...";
+    }
+    else if(step == 2){
+        t.innerHTML = "Menghubungi satelit...";
+    }
+    else if(step == 3){
+        t.innerHTML = "Mencari hadiah...";
+    }
+    else if(step == 4){
+        t.innerHTML = "❌ Error... coba lagi";
+    }
+    else if(step == 5){
+        t.innerHTML = "😆 Kamu masih penasaran ya?";
+    }
+    else if(step == 6){
+        t.innerHTML = "Oke deh...";
+    }
+    else if(step == 7){
+        t.innerHTML = "❤️ Aku sayang kamu ❤️";
+    }
+
+    step++;
+}
+</script>
+
+</body>
+</html>
